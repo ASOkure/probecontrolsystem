@@ -89,13 +89,13 @@ Akanimo Sam Okure ( Built  using TDD and clean architecture practices).
 ### License
 MIT – use it, extend it, learn from it.
 
-### Changes made:
+### How to Make Changes to README.md :
 1. **Added image links**:
   - The images in the `src/main/resources/static/docs/` folder are referenced as:
     - ![Postman Result](static/docs/postmanScreenshotoceanprobecontrol.JPG)
     - ![Test Success Output](static/docs/ideaTestScreenShot.JPG)
 
-Make sure your image files are correctly placed under `src/main/resources/static/docs/`.
+Make sure you place images under `src/main/resources/static/docs/`.
 
    
 2. **Formatted sections**:
@@ -103,7 +103,7 @@ Make sure your image files are correctly placed under `src/main/resources/static
 
 ---
 
-Once you have updated the `README.md` file, remember to commit it:
+Once you have updated the `README.md` file, remember to commit it any changes made:
 
 ### 1. **Add the changes**:
 ```bash
