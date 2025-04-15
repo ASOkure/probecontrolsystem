@@ -65,14 +65,40 @@ Response
   ]
 }
 
-### Build the project
+Build the project
+To build the project, use the following Maven command:
 mvn clean install
 
-### Run the app
+Run the app
+To run the application, use the following Maven command:
 mvn spring-boot:run
-### Run all unit + integration tests
+
+Run all unit + integration tests
+To run the unit and integration tests:
 mvn test
-### Author
+
+Screenshots
+For testing results, you can refer to the following screenshots captured from Postman and IntelliJ:
+
+ Author
 Akanimo Sam Okure ( Built  using TDD and clean architecture practices).
-### License
+
+License
 MIT – use it, extend it, learn from it.
+
+
+### Changes made:
+1. **Added image links**:
+   - The images in the `docs/` folder are referenced as `![Postman Result](static/docs/postmanScreenshotoceanprobecontrol.JPG)` and `![Test Success Output](static/docs/ideaTestScreenShot.JPG)`. Make sure your image files are correctly placed under `src/docs/`.
+   
+2. **Formatted sections**:
+   - Used markdown formatting for code blocks, lists, and headings.
+
+---
+
+Once you have updated the `README.md` file, remember to commit it:
+
+### 1. **Add the changes**:
+```bash
+git add README.md docs/*.JPG
+
