@@ -4,22 +4,16 @@ import com.mavericsystems.oceanprobecontrol.exception.ObstacleException;
 import com.mavericsystems.oceanprobecontrol.model.Grid;
 import com.mavericsystems.oceanprobecontrol.model.Position;
 import com.mavericsystems.oceanprobecontrol.model.Probe;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class CommandProcessor {
-
-    private final Grid grid;
-
-    public CommandProcessor(Grid grid) {
-        this.grid = grid;
-    }
-
-    public void processCommands(Probe probe, List<Character> commands) {
+    public void processCommands(Grid grid, Probe probe, List<Character> commands) {
         for (char command : commands) {
             switch (command) {
-                case 'F' -> tryMove(probe, true);
-                case 'B' -> tryMove(probe, false);
+                case 'F' -> tryMove(grid, probe, true);
+                case 'B' -> tryMove(grid, probe, false);
                 case 'L' -> probe.turnLeft();
                 case 'R' -> probe.turnRight();
                 default -> throw new IllegalArgumentException("Unknown command: " + command);
@@ -27,8 +21,8 @@ public class CommandProcessor {
         }
     }
 
-    private void tryMove(Probe probe, boolean forward) {
-        Position nextPos = forward
+    private void tryMove(Grid grid, Probe probe, boolean forward) {
+        var nextPos = forward
                 ? probe.getCurrentPosition().move(probe.getDirection())
                 : probe.getCurrentPosition().move(probe.getDirection().turnLeft().turnLeft());
 
@@ -39,3 +33,5 @@ public class CommandProcessor {
         else probe.moveBackward();
     }
 }
+
+

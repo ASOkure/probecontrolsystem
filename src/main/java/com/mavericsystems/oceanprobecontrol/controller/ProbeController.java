@@ -15,19 +15,23 @@ import java.util.Set;
 public class ProbeController {
 
     private final CommandProcessor processor;
-    private final Grid grid;
 
-    public ProbeController() {
-
-        this.grid = new Grid(10, 10, Set.of(new Position(2, 2)));
-        this.processor = new CommandProcessor(grid);
+    public ProbeController(CommandProcessor processor) {
+        this.processor = processor;
     }
 
     @PostMapping("/command")
     public ResponseEntity<ProbeCommandResponse> controlProbe(@RequestBody ProbeCommandRequest request) {
+        Grid grid = new Grid(
+                request.gridWidth,
+                request.gridHeight,
+                Set.copyOf(request.obstacles)
+        );
+
         Probe probe = new Probe(new Position(request.startX, request.startY), request.startDirection);
-        processor.processCommands(probe, request.commands);
+
+        processor.processCommands(grid, probe, request.commands);
+
         return ResponseEntity.ok(new ProbeCommandResponse(probe.getCurrentPosition(), probe.getVisitedPositions()));
     }
-
 }
