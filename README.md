@@ -65,14 +65,14 @@ Response
   ]
 }
 
-# Build the project
+### Build the project
 mvn clean install
 
-# Run the app
+### Run the app
 mvn spring-boot:run
-# Run all unit + integration tests
+### Run all unit + integration tests
 mvn test
-## Author
+### Author
 Akanimo Sam Okure ( Built  using TDD and clean architecture practices).
-## License
+### License
 MIT – use it, extend it, learn from it.
