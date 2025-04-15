@@ -89,10 +89,14 @@ Akanimo Sam Okure ( Built  using TDD and clean architecture practices).
 ### License
 MIT – use it, extend it, learn from it.
 
-
 ### Changes made:
 1. **Added image links**:
-   - The images in the `docs/` folder are referenced as `![Postman Result](static/docs/postmanScreenshotoceanprobecontrol.JPG)` and `![Test Success Output](static/docs/ideaTestScreenShot.JPG)`. Make sure your image files are correctly placed under `src/docs/`.
+  - The images in the `src/main/resources/static/docs/` folder are referenced as:
+    - ![Postman Result](static/docs/postmanScreenshotoceanprobecontrol.JPG)
+    - ![Test Success Output](static/docs/ideaTestScreenShot.JPG)
+
+Make sure your image files are correctly placed under `src/main/resources/static/docs/`.
+
    
 2. **Formatted sections**:
    - Used markdown formatting for code blocks, lists, and headings.
