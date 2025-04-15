@@ -3,7 +3,6 @@ package com.mavericsystems.oceanprobecontrol.model;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import javax.swing.text.Position;
 
 public class PositionTest {
 
