@@ -1,4 +1,4 @@
-# Sea Probe Control API
+# ocean Probe Control API
 
 A RESTful API that simulates the navigation of a remotely controlled sea probe on an ocean floor grid. Built using **Java + Spring Boot**, this API is developed using a **Test-Driven Development (TDD)** approach with unit and integration tests.
 
@@ -51,7 +51,9 @@ POST /api/probe/command
   "startDirection": "NORTH",
   "commands": ["F", "R", "F", "L", "B"]
 }
-Response
+```
+
+### Response
 {
   "finalPosition": {
     "x": 1,
@@ -65,25 +67,26 @@ Response
   ]
 }
 
-Build the project
+### Build the project
+
 To build the project, use the following Maven command:
 mvn clean install
 
-Run the app
+### Run the app
 To run the application, use the following Maven command:
 mvn spring-boot:run
 
-Run all unit + integration tests
+### Run all unit + integration tests
 To run the unit and integration tests:
 mvn test
 
-Screenshots
+### Screenshots
 For testing results, you can refer to the following screenshots captured from Postman and IntelliJ:
 
- Author
+### Author
 Akanimo Sam Okure ( Built  using TDD and clean architecture practices).
 
-License
+### License
 MIT – use it, extend it, learn from it.
 
 
@@ -101,4 +104,4 @@ Once you have updated the `README.md` file, remember to commit it:
 ### 1. **Add the changes**:
 ```bash
 git add README.md docs/*.JPG
-
+```
