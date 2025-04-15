@@ -7,11 +7,11 @@ import com.mavericsystems.oceanprobecontrol.model.Position;
 import com.mavericsystems.oceanprobecontrol.model.Probe;
 import com.mavericsystems.oceanprobecontrol.service.CommandProcessor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
-
+@RestController
+@RequestMapping("/api/probe")
 public class ProbeController {
 
     private final CommandProcessor processor;
